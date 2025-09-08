@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Stage BAFA - Mohamed Yassine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f9f7ff 0%, #e0f0ff 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        header {
+            background: linear-gradient(135deg, #e00808 0%, #000000 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            transform: rotate(30deg);
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .photo-container:hover {
+            transform: scale(1.05);
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ee1515;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #f0f0f0;
+            font-size: 1.5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        h2 i {
+            margin-right: 12px;
+            background: linear-gradient(135deg, #e70808 0%, #fdfdfd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, #ce0808, #fafafa);
+            border-radius: 3px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9ff;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .experience-item:hover, .education-item:hover {
+            transform: translateX(5px);
+        }
+        .experience-item h3, .education-item h3 {
+            color: #c20e0e;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        .date {
+            color: #f1f0f0;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        li:before {
+            content: "•";
+            color: #d60909;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+        .qualities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .quality {
+            background: linear-gradient(135deg, #e20303 0%, #ffffff 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(228, 5, 5, 0.3);
+            transition: transform 0.2s ease;
+        }
+        .quality:hover {
+            transform: translateY(-3px);
+        }
+        footer {
+            background: linear-gradient(135deg, #ff0000 0%, #ffffff 100%);
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .photo-container {
+                width: 120px;
+                height: 120px;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="photo-container">
+                <!-- Remplacez par votre photo -->
+                <img src="c:\Users\windo\Downloads\IMG_6636-removebg-preview.png" alt="Photo de Mohamed Yassine">
+            </div>
+            <h1>Mohamed Yassine</h1>
+            <p class="subtitle">Candidat au Stage BAFA - 17 ans</p>
+        </header>
+        
+        <div class="content">
+            <div class="left-column">
+                <section>
+                    <h2><i class="fas fa-user"></i>Profil</h2>
+                    <p>Jeune motivé de 17 ans, je souhaite devenir animateur et obtenir mon BAFA. J’aime m’occuper des enfants, organiser des activités et je suis prêt à apprendre lors de ce stage.</p>
+                </section>
+                
+                <section>
+                    <h2><i class="fas fa-briefcase"></i>Expérience</h2>
+                    <div class="experience-item">
+                        <h3>Expérience d'animation bénévole</h3>
+                        <span class="date">2 semaines - 2023</span>
+                        <ul>
+                            <li>Encadrement d'enfants de 5 à 10 ans</li>
+                            <li>Organisation de jeux collectifs en extérieur</li>
+                            <li>Animation d'ateliers créatifs (dessin, peinture)</li>
+                            <li>Garde d'enfants et surveillance durant les temps calmes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <h3>Garde d'enfants occasionnelle</h3>
+                        <ul>
+                            <li>Sorties d'école et aide aux devoirs</li>
+                            <li>Activités récréatives les week-ends</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="right-column">
+                <section>
+                    <h2><i class="fas fa-graduation-cap"></i>Formation</h2>
+                    <div class="education-item">
+                        <h3>Première partie de formation BAFA</h3>
+                        <span class="date">Formation de base effectuée</span>
+                    </div>
+                    <div class="education-item">
+                        <h3>Niveau Baccalauréat</h3>
+                        <span class="date">En cours - Lycée</span>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2><i class="fas fa-star"></i>Compétences</h2>
+                    <div class="qualities">
+                        <span class="quality">Créatif</span>
+                        <span class="quality">Responsable</span>
+                        <span class="quality">À l'écoute</span>
+                        <span class="quality">Patient</span>
+                        <span class="quality">Sens du jeu</span>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2><i class="fas fa-heart"></i>Centres d'intérêt</h2>
+                    <ul>
+                        <li>Animation d'activités pour enfants</li>
+                        <li>Sports collectifs</li>
+                        <li>Jeux de société et jeux éducatifs</li>
+                        <li>Bénévolat associatif</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> 07.88.24.47.14</p>
+                <p><i class="fas fa-envelope"></i> joomohamedyassine@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Courtry</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
