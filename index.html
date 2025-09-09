@@ -918,7 +918,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Lycée Simone Veil</h1>
-                <p>Excellence académique et innovation pédagogique au cœur de Noisiel</p>
+                <p>Académique et innovation pédagogique au cœur de Noisiel</p>
                 <div>
                     <a href="#" class="btn">Découvrir nos formations</a>
                     <a href="#" class="btn btn-outline">Nous contacter</a>
@@ -964,34 +964,34 @@
             <div class="news-grid">
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Forum des métiers">
+                        <img src="https://lyceesimoneveil.fr/images/rentree%202025.png" alt="Forum des métiers">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">12 septembre 2023</div>
-                        <h3>Forum des métiers 2023</h3>
-                        <p>Rencontrez des professionnels et découvrez les opportunités de carrière.</p>
+                        <div class="news-date">9 septembre 2025</div>
+                        <h3>Modalités de rentrée 2025</h3>
+                        <p>Lettre de rentrée pour les élèves et les classes</p>
                         <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activités périscolaires">
+                        <img src="https://lyceesimoneveil.fr/images/Espace%20de%20travail.png" alt="Activités périscolaires">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">5 septembre 2023</div>
-                        <h3>Activités Périscolaires</h3>
-                        <p>Inscriptions ouvertes pour les activités extrascolaires de cette année.</p>
+                        <div class="news-date">8 septembre 2025</div>
+                        <h3>École ouverte</h3>
+                        <p>session août 2025 -Programme et inscription</p>
                         <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Réunion de rentrée">
+                        <img src="https://lyceesimoneveil.fr/images/ri.png" alt="Réunion de rentrée">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">28 août 2023</div>
-                        <h3>Réunion de Rentrée</h3>
-                        <p>Informations importantes pour bien commencer l'année scolaire.</p>
+                        <div class="news-date">1 septembre 2025</div>
+                        <h3>Réglement intérieur</h3>
+                        <p>Réglement intérieur</p>
                         <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -1062,3 +1062,84 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Lycée Simone Veil</h3>
+                    <p>Excellence académique et innovation pédagogique au cœur de Noisiel.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Formations</a></li>
+                        <li><a href="#">Actualités</a></li>
+                        <li><a href="#">Vie Scolaire</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ressources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Pronote</a></li>
+                        <li><a href="#">Mon Lycée.net</a></li>
+                        <li><a href="#">Parcoursup</a></li>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir les dernières actualités.</p>
+                    <form>
+                        <input type="email" placeholder="Votre email" style="padding: 10px; width: 100%; margin-bottom: 10px; border: none;">
+                        <button type="submit" class="btn" style="width: 100%;">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lycée Simone Veil - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu toggle functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-main a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
